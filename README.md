@@ -1,4 +1,4 @@
-# tip_calculator
+# Tip Calculator
 
 1) Enter Total no of people sharing bill
 
