@@ -8,5 +8,5 @@
 
 4) Click on calculate to get tip per head and total bill after tip
 
-Click on following link to see working
+Click on link to see working
 https://adityakadam1994.github.io/tip_calculator/
