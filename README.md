@@ -6,7 +6,7 @@
 
 3) Select service rating
 
-4) Click on calculate get tip per head and total bill after tip
+4) Click on calculate to get tip per head and total bill after tip
 
 Click on following link to see working
 https://adityakadam1994.github.io/tip_calculator/
