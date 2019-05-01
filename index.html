@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tip Calcualtor</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-8">
+					<div class="card bg-info text-white">
+						<h4 class="card-title">Tip Calculator</h4>
+					   <div class="card-body">
+					   		<form action="" class="form needs-validation">
+					   			  <div class="form-group">
+								    <label for="uname" >No of people sharing bill:</label>
+								    <input type="number" class="form-control" id="customers" placeholder="Enter no of people" required>
+
+								  </div>
+								  <div class="form-group">
+								    <label for="uname">Total Bill:</label>
+								    <input type="number" class="form-control" id="bill" placeholder="Enter total bill" required>
+
+								  </div>
+
+								  <div class="form-group">
+								    <label for="uname">Select rating:</label><br>
+								    <select name="" id="service" required>
+								    	<option value="">Select service rating</option>
+								    	<option value="5">5% Very Bad</option>
+								    	<option value="10">10% Good</option>
+								    	<option value="25">25% Very Good</option>
+								    </select>
+
+								  </div>
+								  <button type="button" class="btn btn-secondary calc">Calculate</button>
+								  <p class="tip-text">Tip per head: <span class="tip-value"></span> </p>
+								  <p class="total-bill">Total bill after tip: <span class="bill-value"></span></p>
+					   			
+					   		</form>
+					   </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<script>
+	$(document).ready(function() {
+		
+		
+
+
+		$('.calc').on('click',function() {
+			var no_of_people = $('#customers').val();
+			var total_bill = $('#bill').val();
+			var service = $('#service').val();
+			var tip_text = $('.tip-value');
+			var bill_value = $('.bill-value');
+			if (no_of_people == "" | total_bill == "" | service=="") {
+				alert("all fields are mandatory");
+			}
+			else {
+				tip_text.empty();
+				bill_value.empty();
+				var tip = ((service/100)*total_bill)/no_of_people;
+				var after_tip_bill = parseInt($('#bill').val()) + parseInt((service/100)*total_bill);
+				tip_text.html(tip);
+				bill_value.html(after_tip_bill);
+				
+
+			}
+		})
+	});
+</script>
+</body>
+</html>

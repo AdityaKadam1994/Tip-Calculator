@@ -1,0 +1,25 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.card-title {
+	border-bottom: 1px solid #fff;
+	padding-bottom: 20px;
+	padding-left: 15px;
+}
+
+label {
+	
+}
+
+.form-group {
+	padding-bottom: 30px;
+}
+
+.card {
+	padding-bottom: 50px;
+}
+.calc {
+	margin-bottom: 10px;
+}
